@@ -6,6 +6,9 @@ import Animatedbtn from "../ui/animatedbtn";
 import Aboutbtn from "../ui/aboutbtn";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { RiNextjsFill } from "react-icons/ri";
+import { IoIosCall } from "react-icons/io";
+import { BiLogoGmail } from "react-icons/bi";
 
 export function Component() {
   return (
@@ -30,14 +33,6 @@ export function Component() {
               prefetch={false}
             >
               About
-            </Link>
-
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              prefetch={false}
-            >
-              Contact
             </Link>
           </nav>
           <Button variant="ghost" size="icon" className="md:hidden">
@@ -382,36 +377,76 @@ export function Component() {
           </div>
         </section>
       </main>
-      <footer className="bg-muted py-6 md:py-8">
-        <div className="container mx-auto px-4 md:px-6 flex flex-col items-center justify-between md:flex-row">
-          <div className="flex items-center space-x-4">
-            {/* <MountainIcon className="w-6 h-6" /> */}
-            <span className="text-muted-foreground">Uday Bhardwaj</span>
-          </div>
-          <nav className="flex space-x-4 mt-4 md:mt-0">
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              prefetch={false}
-            >
-              Home
-            </Link>
-            <Link
-              href="/About"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              prefetch={false}
-            >
-              About
-            </Link>
+      <footer className="bg-muted py-12">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Contact Card */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold mb-4">
+                Contact Information
+              </h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <Link href="mailto:udaybhardwaj152005@gmail.com">
+                    <button className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+                      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+                      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-white px-7 text-sm font-medium text-black backdrop-blur-3xl gap-2 undefined">
+                        udaybhardwaj152005@gmail.com
+                        <BiLogoGmail />
+                      </span>
+                    </button>
+                  </Link>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Link href="tel:+919368884968">
+                    <button className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+                      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+                      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-white px-7 text-sm font-medium text-black backdrop-blur-3xl gap-2 undefined">
+                        +91 9368884968
+                        <IoIosCall />
+                      </span>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-            <Link
-              href="#"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              prefetch={false}
-            >
-              Contact
-            </Link>
-          </nav>
+            {/* Social Media Card */}
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold mb-4">Social Media</h3>
+              <div className="flex space-x-4">
+                <Link
+                  href="https://www.linkedin.com/in/uday-bhardwaj-b1373331a/"
+                  prefetch={false}
+                  className="text-blue-600 hover:underline"
+                >
+                  <button className="group w-12 hover:w-44 h-12 hover:bg-sky-600 relative bg-sky-700 rounded text-neutral-50 duration-700 before:duration-700 before:hover:500 font-bold flex justify-start gap-2 items-center p-2 pr-6 before:absolute before:-z-10 before:left-8 before:hover:left-40 before:w-6 before:h-6 before:bg-sky-700 before:hover:bg-sky-600 before:rotate-45">
+                    <svg
+                      y="0"
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0"
+                      width="100"
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="xMidYMid meet"
+                      height="100"
+                      className="w-8 h-8 shrink-0 fill-neutral-50"
+                    >
+                      <path d="M92.86,0H7.12A7.17,7.17,0,0,0,0,7.21V92.79A7.17,7.17,0,0,0,7.12,100H92.86A7.19,7.19,0,0,0,100,92.79V7.21A7.19,7.19,0,0,0,92.86,0ZM30.22,85.71H15.4V38H30.25V85.71ZM22.81,31.47a8.59,8.59,0,1,1,8.6-8.59A8.6,8.6,0,0,1,22.81,31.47Zm63,54.24H71V62.5c0-5.54-.11-12.66-7.7-12.66s-8.91,6-8.91,12.26V85.71H39.53V38H53.75v6.52H54c2-3.75,6.83-7.7,14-7.7,15,0,17.79,9.89,17.79,22.74Z"></path>
+                    </svg>
+                    <span className="origin-left inline-flex duration-100 group-hover:duration-300 group-hover:delay-500 opacity-0 group-hover:opacity-100 border-l-2 px-1 transform scale-x-0 group-hover:scale-x-100 transition-all">
+                      Uday Bhardwaj
+                    </span>
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Uday Bhardwaj. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
